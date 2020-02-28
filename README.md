@@ -30,13 +30,32 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach allows the function that it takes as an argument to change the values of the array that it is being called on while .map returns a brand new array which is a version of the initial array that has been modified by the argument function.
+
 2. What is the difference between a function and a method?
+
+A function is a block of code that can take some inputs in the form of parameters and can produce an output value in the form of a return value. It has its own scope as well which means that variables and functions that are declared inside of the function cannot be directly used outside of it (there are some exceptions such as when an inner function that changes a variable inside the outer function is returned by an outer function). A method is the same as a function except that a method is a function that belongs to an object.
 
 3. What is closure?
 
+A closure is when a function wants access not only to the functions and variables contained within it meaning its own scope or lexical environment, but also needs to access to those variables and functions that are in a outer lexical environment. An inner function can have an increase in the variables and functions that it has access to by being passed as an argument to another function that was declared at the same scope level (lets call it a sibling function) or by being returned by the outer function. This is called exposing the inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+Rule #1: When the function that 'this' resides in is in the global scope, the value of 'this' is the window.
+
+Rule #2: When a function is called with the syntax "object.function" the object to the left of the dot is the value of 'this'.
+
+Rule #3: In a constructor function 'this' is the instance of the object that is created with that constructor function. 
+Example: When creating a new object called Tyler with a constructor called Person, Tyler is the value of 'this'.
+
+Rule #4: 'this' can be explicitly defined with the call, apply, and bind methods when we want to override the implied value of 'this'
+*/
+
 5. Why do we need super() in an extended class?
+
+We need super() in an extended class in order to inherit the attributes and prototype of the parent class, which is why it accepts an attributes object as an argument. This gives the child class access to the key value pairs and methods of the parent class in addition to those that belong to the child class.
+
 
 ## Project Set up
 
